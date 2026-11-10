@@ -229,7 +229,5 @@ By identifying valuable, loyal, potential, at-risk and inactive customers, busin
 
 ## 12. Author
 
-**Your Name**
+**Samhitha Sura**
 
-- GitHub: YOUR_GITHUB_PROFILE
-- LinkedIn: YOUR_LINKEDIN_PROFILE
