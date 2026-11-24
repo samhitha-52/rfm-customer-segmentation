@@ -220,7 +220,53 @@ The project can be extended with:
 - Customer Lifetime Value (CLV) estimation.
 - Time-based RFM analysis to monitor changes in customer behaviour.
 - Campaign performance evaluation and customer retention analysis.
+  
+## K-Means Clustering
 
+To improve customer segmentation, K-Means clustering was applied using Recency, Frequency and Monetary (RFM) features.
+
+### Model Evaluation
+
+The optimal number of clusters was investigated using the Elbow Method and Silhouette Score.
+
+| Number of Clusters (K) | Silhouette Score |
+|---:|---:|
+| 2 | 0.4328 |
+| 3 | 0.3365 |
+| 4 | 0.3375 |
+| 5 | 0.3162 |
+| 6 | 0.3124 |
+| 7 | 0.3092 |
+| 8 | 0.3033 |
+| 9 | 0.2811 |
+| 10 | 0.2767 |
+
+**Selected K: 4**
+
+Although K = 2 achieved a higher Silhouette Score, K = 4 was retained to provide more detailed and actionable customer profiles for business analysis.
+
+### Customer Clusters
+
+| Cluster | Customers | Average Recency | Average Frequency | Average Monetary |
+|---|---:|---:|---:|---:|
+| 0 | 713 | 12.17 | 13.75 | 8088.02 |
+| 1 | 1622 | 181.51 | 1.32 | 341.00 |
+| 2 | 837 | 17.70 | 2.19 | 577.32 |
+| 3 | 1166 | 71.64 | 4.08 | 1801.78 |
+
+### Business Recommendations
+
+- **Cluster 0:** High-value recent customers – loyalty rewards and exclusive offers.
+- **Cluster 1:** Inactive customers – reactivation and win-back campaigns.
+- **Cluster 2:** Recent low-frequency customers – encourage repeat purchases.
+- **Cluster 3:** Regular potential customers – cross-selling and upselling.
+
+### Project Outputs
+
+- `rfm_kmeans_results.csv` – Customer-level clustering results.
+- `elbow_method.png` – Elbow Method visualization.
+- `silhouette_score.png` – Silhouette Score comparison.
+  
 ## 11. Conclusion
 
 This project demonstrates how retail transaction data can be transformed into actionable customer insights using Python and RFM analysis.
